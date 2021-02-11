@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesignIcons from 'react-native-vector-icons/AntDesign';
 
-export const Container = styled.View`
+export const SafeAreaView = styled.SafeAreaView`
   flex: 1;
   background-color: ${({ theme }) => theme.palette.primary.main};
 `;

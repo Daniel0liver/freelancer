@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-export const defaultTheme: DefaultTheme = {
+export const lightTheme: DefaultTheme = {
   borderRadius: '4px',
   palette: {
     common: {

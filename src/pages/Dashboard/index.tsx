@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Container,
+  SafeAreaView,
   StatusBar,
   Header,
   HeaderLeft,
@@ -15,7 +15,7 @@ import {
 
 export default function Dashboard() {
   return (
-    <Container>
+    <SafeAreaView>
       <StatusBar barStyle="light-content" />
       <Header>
         <HeaderLeft>
@@ -29,6 +29,6 @@ export default function Dashboard() {
       <ContainerTitle>
         <WelcomeUser>{'Hello,\nDaniel Oliveira'}</WelcomeUser>
       </ContainerTitle>
-    </Container>
+    </SafeAreaView>
   );
 }
