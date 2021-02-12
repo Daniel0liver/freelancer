@@ -21,7 +21,7 @@ interface IOnBoard {
 }
 
 export default function OnBoard({ navigation }: IOnBoard) {
-  const goToDashboard = () => navigation.navigate('dashboard');
+  const goToDashboard = () => navigation.replace('dashboard');
 
   return (
     <SafeAreaView>
