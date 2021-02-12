@@ -11,7 +11,7 @@ export default function CustomStatusBar({
 
   return (
     <StatusBar
-      barStyle={barStyle || 'dark-content'}
+      barStyle={barStyle || theme.dark ? 'light-content' : 'dark-content'}
       backgroundColor={backgroundColor || theme.palette.primary.surface}
     />
   );

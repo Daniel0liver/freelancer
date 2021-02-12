@@ -1,6 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
-export const lightTheme: DefaultTheme = {
+export const lightColors: Omit<DefaultTheme, 'borderRadius' | 'boxShadow'> = {
+  dark: false,
   palette: {
     common: {
       black: '#222831',
@@ -21,7 +22,8 @@ export const lightTheme: DefaultTheme = {
   },
 };
 
-export const darkTheme: DefaultTheme = {
+export const darkColors: Omit<DefaultTheme, 'borderRadius' | 'boxShadow'> = {
+  dark: true,
   palette: {
     common: {
       black: '#222831',
