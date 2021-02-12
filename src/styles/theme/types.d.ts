@@ -3,10 +3,9 @@ import 'styled-components';
 
 interface IPalette {
   main: string;
-  contrastText: string;
   background: string;
-  graylish: string;
-  tint: string;
+  surface: string;
+  contrastText: string;
 }
 
 declare module 'styled-components' {

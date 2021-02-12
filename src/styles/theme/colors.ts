@@ -4,21 +4,19 @@ export const lightTheme: DefaultTheme = {
   palette: {
     common: {
       black: '#222831',
-      white: '#ffffff',
+      white: '#FFFFFF',
     },
     primary: {
       main: '#6C63FF',
-      contrastText: '#ffffff',
-      background: '#f4f4f4',
-      graylish: '#a4a4a4',
-      tint: '#2b49c3',
+      surface: '#FFFFFF',
+      background: '#F5F6FC',
+      contrastText: '#000000DE',
     },
     secondary: {
       main: '#F9A826',
-      contrastText: '#ffffff',
-      background: '#f4f4f4',
-      graylish: '#a4a4a4',
-      tint: '#2b49c3',
+      surface: '#FFFFFF',
+      background: '#F5F6FC',
+      contrastText: '#000000DE',
     },
   },
 };
@@ -27,21 +25,19 @@ export const darkTheme: DefaultTheme = {
   palette: {
     common: {
       black: '#222831',
-      white: '#ffffff',
+      white: '#FFFFFF',
     },
     primary: {
-      main: '#4263ec',
-      contrastText: '#ffffff',
-      background: '#f4f4f4',
-      graylish: '#a4a4a4',
-      tint: '#2b49c3',
+      main: '#6C63FF',
+      surface: '#333333',
+      background: '#202020',
+      contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#709fb0',
-      contrastText: '#ffffff',
-      background: '#f4f4f4',
-      graylish: '#a4a4a4',
-      tint: '#2b49c3',
+      main: '#F9A826',
+      surface: '#333333',
+      background: '#202020',
+      contrastText: '#FFFFFF',
     },
   },
 };
