@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTheme } from 'styled-components';
+
+import StatusBar from '../../components/StatusBar';
+
 import { DashboardScreenNavigationProp } from '../../navigation/types';
 
 import Tasksimage from '../../assets/images/TaskList.svg';
 
 import {
   SafeAreaView,
-  StatusBar,
   ImageContainer,
   Footer,
   TitleContainer,
@@ -21,11 +24,16 @@ interface IOnBoard {
 }
 
 export default function OnBoard({ navigation }: IOnBoard) {
+  const theme = useTheme();
+
   const goToDashboard = () => navigation.replace('dashboard');
 
   return (
     <SafeAreaView>
-      <StatusBar barStyle="light-content" />
+      <StatusBar
+        barStyle={'light-content'}
+        backgroundColor={theme.palette.primary.main}
+      />
       <ImageContainer>
         <Tasksimage width={'100%'} height={'75%'} />
       </ImageContainer>

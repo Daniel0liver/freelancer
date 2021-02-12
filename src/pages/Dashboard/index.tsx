@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { SafeAreaView, StatusBar } from './styles';
+import StatusBar from '../../components/StatusBar';
+import { SafeAreaView } from './styles';
 
 export default function Dashboard() {
   return (
