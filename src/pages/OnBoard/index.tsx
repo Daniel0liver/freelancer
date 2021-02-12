@@ -1,4 +1,5 @@
 import React from 'react';
+import { DashboardScreenNavigationProp } from '../../navigation/types';
 
 import Tasksimage from '../../assets/images/TaskList.svg';
 
@@ -15,7 +16,13 @@ import {
   FooterLink,
 } from './styles';
 
-export default function OnBoard() {
+interface IOnBoard {
+  navigation: DashboardScreenNavigationProp;
+}
+
+export default function OnBoard({ navigation }: IOnBoard) {
+  const goToDashboard = () => navigation.navigate('dashboard');
+
   return (
     <SafeAreaView>
       <StatusBar barStyle="light-content" />
@@ -28,7 +35,7 @@ export default function OnBoard() {
           <SubTitle>Finish your work</SubTitle>
         </TitleContainer>
         <ButtonContainer>
-          <Button>
+          <Button onPress={() => goToDashboard()}>
             <SubTitle>Get started now</SubTitle>
           </Button>
           <FooterLink>Do you have on account? login</FooterLink>
