@@ -5,6 +5,7 @@ import Api from '../../services/Api';
 import CardTaskCount from '../../components/CardTaskCount';
 import CardTask from '../../components/CardTask';
 import ScrollView from '../../components/ScrollView';
+import Section from '../../components/Section';
 import StatusBar from '../../components/StatusBar';
 
 import { CardStateProps } from '../../components/CardTaskCount/types';
@@ -14,18 +15,14 @@ import { SafeAreaView } from './styles';
 
 export default function Dashboard() {
   const [data, setData] = useState<IDataState>([]);
+  const [cardActive, setCardActive] = useState<CardStateProps>(null);
 
   const handleChangeCard = async (card: CardStateProps) => {
-    if (card === 'active') {
-      const active = await Api.getActiveTasks();
-      setData(active);
-    } else if (card === 'ongoing') {
-      const ongoing = await Api.getOngoingTasks();
-      setData(ongoing);
-    } else {
-      const done = await Api.getDoneTasks();
-      setData(done);
-    }
+    setCardActive(card);
+
+    if (card === 'active') setData(await Api.getActiveTasks());
+    if (card === 'ongoing') setData(await Api.getOngoingTasks());
+    if (card === 'done') setData(await Api.getDoneTasks());
   };
 
   return (
@@ -33,9 +30,11 @@ export default function Dashboard() {
       <StatusBar barStyle="dark-content" />
       <ScrollView>
         <CardTaskCount key={0} onChange={handleChangeCard} />
-        {data.map((item, index) => {
-          return <CardTask key={index} data={item} />;
-        })}
+        <Section title={`${cardActive} tasks`}>
+          {data.map((item, index) => {
+            return <CardTask key={index} data={item} />;
+          })}
+        </Section>
       </ScrollView>
     </SafeAreaView>
   );

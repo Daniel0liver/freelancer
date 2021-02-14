@@ -6,4 +6,4 @@ export interface ICardTaskCountProps {
   onChange: (type: CardStateProps) => void;
 }
 
-export type CardStateProps = 'active' | 'ongoing' | 'done';
+export type CardStateProps = 'active' | 'ongoing' | 'done' | null;
