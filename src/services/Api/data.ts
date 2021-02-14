@@ -6,6 +6,7 @@ export const actives = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '9am to 11am',
     color: '#ffb63a',
+    icon: 'notebook',
   },
   {
     id: 1,
@@ -14,6 +15,7 @@ export const actives = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '1pm to 3pm',
     color: '#3cf0d4',
+    icon: 'home',
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const actives = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '3pm to 5pm',
     color: '#c93aff',
+    icon: 'tag',
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ export const actives = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '9am to 11am',
     color: '#567fff',
+    icon: 'cup',
   },
 ];
 
@@ -41,6 +45,7 @@ export const ongoings = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '9am to 11am',
     color: '#ffb63a',
+    icon: 'briefcase',
   },
   {
     id: 1,
@@ -49,6 +54,7 @@ export const ongoings = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '1pm to 3pm',
     color: '#3cf0d4',
+    icon: 'lock',
   },
   {
     id: 2,
@@ -57,6 +63,7 @@ export const ongoings = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '3pm to 5pm',
     color: '#c93aff',
+    icon: 'heart',
   },
   {
     id: 3,
@@ -65,6 +72,7 @@ export const ongoings = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '9am to 11am',
     color: '#567fff',
+    icon: 'flag',
   },
 ];
 
@@ -76,6 +84,7 @@ export const dones = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '9am to 11am',
     color: '#ffb63a',
+    icon: 'bulb',
   },
   {
     id: 1,
@@ -84,6 +93,7 @@ export const dones = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '1pm to 3pm',
     color: '#3cf0d4',
+    icon: 'bubble',
   },
   {
     id: 2,
@@ -92,6 +102,7 @@ export const dones = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '3pm to 5pm',
     color: '#c93aff',
+    icon: 'calendar',
   },
   {
     id: 3,
@@ -100,5 +111,6 @@ export const dones = [
       'fix a bug ocurrency on smartPonto and after fixed publish on google play',
     date: '9am to 11am',
     color: '#567fff',
+    icon: 'home',
   },
 ];

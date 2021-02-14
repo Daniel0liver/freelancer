@@ -1,4 +1,4 @@
-import { lightColors, darkColors } from './colors';
+import { lightColors } from './colors';
 import { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
@@ -14,7 +14,7 @@ const theme: DefaultTheme = {
 
     elevation: 2,
   },
-  ...darkColors,
+  ...lightColors,
 };
 
 export { theme };

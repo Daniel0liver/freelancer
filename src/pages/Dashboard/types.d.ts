@@ -4,6 +4,7 @@ export interface ITask {
   description: string;
   date: string;
   color: string;
+  icon: string;
 }
 
 export interface IDataState extends Array<ITask> {}

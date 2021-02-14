@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
 export const Container = styled.View.attrs({
   marginVertical: 10,
@@ -20,26 +20,21 @@ export const Card = styled(RectButton).attrs(({ theme }) => ({
 `;
 
 export const Left = styled.View`
-  flex:1;
+  flex: 1;
   align-items: flex-start;
   justify-content: center;
 `;
 
-export const Right = styled.View`
+export const Right = styled(Left)`
   flex: 4;
-  align-items: flex-start;
-  justify-content: center;
 `;
 
-export const Icon = styled(FontAwesome)`
-  width: 50px;
-  height: 50px;
-  justify-content:center;
-  align-items:center;
-  display:flex;
+export const Icon = styled(SimpleLineIcons)`
+  padding: 14px 15px;
   border-radius: 100px;
+  color: #ffffff;
+  background: ${({ color }) => color};
 `;
-
 
 export const Title = styled.Text`
   font-size: 18px;
