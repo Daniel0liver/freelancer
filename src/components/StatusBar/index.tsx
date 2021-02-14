@@ -8,10 +8,11 @@ export default function CustomStatusBar({
   backgroundColor,
 }: StatusBarProps) {
   const theme = useTheme();
+  const defaultBarStyled = theme.dark ? 'dark-content' : 'light-content';
 
   return (
     <StatusBar
-      barStyle={barStyle || theme.dark ? 'dark-content' : 'light-content'}
+      barStyle={barStyle ?? defaultBarStyled}
       backgroundColor={backgroundColor || theme.palette.primary.surface}
     />
   );

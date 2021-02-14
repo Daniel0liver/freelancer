@@ -31,7 +31,7 @@ export default function OnBoard({ navigation }: IOnBoard) {
   return (
     <SafeAreaView>
       <StatusBar
-        barStyle={'light-content'}
+        barStyle="light-content"
         backgroundColor={theme.palette.primary.main}
       />
       <ImageContainer>
