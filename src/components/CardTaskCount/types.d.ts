@@ -2,7 +2,7 @@ export interface ICardStyles {
   isActive: boolean;
 }
 
-export interface ICardProps {
+export interface ICardTaskCountProps {
   onChange: (type: CardStateProps) => void;
 }
 

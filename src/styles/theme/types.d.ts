@@ -6,6 +6,7 @@ interface IPalette {
   background: string;
   surface: string;
   contrastText: string;
+  subtitle: string;
 }
 
 declare module 'styled-components' {

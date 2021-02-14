@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { CardStateProps, ICardProps } from './types';
+import { CardStateProps, ICardTaskCountProps } from './types';
 import { Container, Card, Title, Subtitle } from './styles';
 
-export default function CardTaskCount({ onChange }: ICardProps) {
+export default function CardTaskCount({ onChange }: ICardTaskCountProps) {
   const [activeCard, setActiveCard] = useState<CardStateProps>('active');
 
   const handleChange = (type: CardStateProps) => {
