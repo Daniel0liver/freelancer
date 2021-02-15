@@ -1,6 +1,6 @@
 import React from 'react';
-import { format } from 'date-fns'
-
+import { format } from 'date-fns';
+import { useTheme } from 'styled-components';
 import { StackHeaderProps } from '@react-navigation/stack';
 
 import { Container, Left, Center, Right, Button, Profile, Icon, Title, Subtitle } from './styles';
@@ -8,25 +8,32 @@ import { Container, Left, Center, Right, Button, Profile, Icon, Title, Subtitle 
 type THeaderProps = Omit<StackHeaderProps, "mode" | "layout" | "insets" | "styleInterpolator">
 
 export default function Header({ scene, navigation, previous }: THeaderProps) {
+  const theme = useTheme();
+
   const { options } = scene.descriptor;
   const title = options.title;
+  const headerRight = options.headerRight;
 
   return (
     <Container>
       <Left>
-        <Profile>
-          <Icon name="emotsmile" size={22} color="#fff" />
-        </Profile>
+        {previous ? (
+          <Button onPress={() => navigation.goBack()}>
+            <Icon name="arrow-left" size={20} color={theme.palette.primary.contrastText} />
+          </Button>
+        ) : (
+            <Profile>
+              <Icon name="emotsmile" size={20} color={theme.palette.common.white} />
+            </Profile>
+          )}
       </Left>
       <Center>
         <Subtitle>{format(new Date(), 'ccc, dd LLLL yyyy')}</Subtitle>
         <Title>{title}</Title>
       </Center>
       <Right>
-        <Button>
-          <Icon name="settings" size={22} color="#000" />
-        </Button>
+        {headerRight && headerRight() || null}
       </Right>
-    </Container>
+    </Container >
   )
 }

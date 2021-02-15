@@ -44,8 +44,8 @@ export const Subtitle = styled.Text`
 `;
 
 export const Button = styled(RectButton)`
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: 100px;
   align-items: center;
   justify-content: center;

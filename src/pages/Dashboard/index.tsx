@@ -9,11 +9,11 @@ import Section from '../../components/Section';
 import StatusBar from '../../components/StatusBar';
 
 import { CardStateProps } from '../../components/CardTaskCount/types';
-import { IDataState } from './types';
+import { IDataState, IDashboard } from './types';
 
 import { SafeAreaView } from './styles';
 
-export default function Dashboard() {
+export default function Dashboard({ navigation }: IDashboard) {
   const [data, setData] = useState<IDataState>([]);
   const [cardActive, setCardActive] = useState<CardStateProps>(null);
 
