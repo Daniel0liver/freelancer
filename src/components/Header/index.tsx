@@ -19,7 +19,7 @@ export default function Header({ scene, navigation, previous }: THeaderProps) {
         </Profile>
       </Left>
       <Center>
-        <Subtitle>{format(new Date().setUTCHours(-3), 'ccc, dd LLLL yyyy')}</Subtitle>
+        <Subtitle>{format(new Date(), 'ccc, dd LLLL yyyy')}</Subtitle>
         <Title>{title}</Title>
       </Center>
       <Right>
