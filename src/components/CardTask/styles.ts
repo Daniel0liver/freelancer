@@ -30,7 +30,7 @@ export const Right = styled(Left)`
 `;
 
 export const Icon = styled(SimpleLineIcons)`
-  padding: 14px 15px;
+  padding: 15px;
   border-radius: 100px;
   color: #ffffff;
   background: ${({ color }) => color};
