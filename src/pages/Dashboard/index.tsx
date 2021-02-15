@@ -29,7 +29,7 @@ export default function Dashboard() {
     <SafeAreaView>
       <StatusBar barStyle="dark-content" />
       <ScrollView>
-        <CardTaskCount key={0} onChange={handleChangeCard} />
+        <CardTaskCount key={0} activeLength={12} ongoingLength={8} doneLength={4} onChange={handleChangeCard} />
         <Section title={`${cardActive} tasks`}>
           {data.map((item, index) => {
             return <CardTask key={index} data={item} />;
