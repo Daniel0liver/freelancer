@@ -23,7 +23,7 @@ export default function Routes() {
         screenOptions={{
           header: ({ scene, navigation, previous }) => (
             <Header scene={scene} navigation={navigation} previous={previous} />
-          ),,
+          ),
         }}>
         <Stack.Screen
           name="OnBoard"

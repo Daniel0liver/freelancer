@@ -24,6 +24,7 @@ export default function Header({ scene, navigation, previous }: THeaderProps) {
   const theme = useTheme();
 
   const { options } = scene.descriptor;
+  const { name } = scene.route;
   const title = options.title;
   const headerRight = options.headerRight;
 
@@ -49,7 +50,9 @@ export default function Header({ scene, navigation, previous }: THeaderProps) {
         )}
       </Left>
       <Center>
-        <Subtitle>{format(new Date(), 'ccc, dd LLLL yyyy')}</Subtitle>
+        {name === 'Dashboard' && (
+          <Subtitle>{format(new Date(), 'ccc, dd LLLL yyyy')}</Subtitle>
+        )}
         <Title>{title}</Title>
       </Center>
       <Right>{(headerRight && headerRight()) || null}</Right>
