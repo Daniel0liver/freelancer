@@ -7,7 +7,12 @@ interface IScrollViewProps {
 
 export default function CustomScrollView({ children }: IScrollViewProps) {
   return (
-    <ScrollView scrollEventThrottle={1} showsVerticalScrollIndicator={false}>
+    <ScrollView
+      scrollEventThrottle={1}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        paddingHorizontal: 15,
+      }}>
       {children}
     </ScrollView>
   );

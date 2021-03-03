@@ -2,9 +2,10 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import Routes from './routes';
-import { theme } from './styles/theme';
+import { useTheme } from './styles/theme';
 
 export default function App() {
+  const theme = useTheme();
   return (
     <ThemeProvider theme={theme}>
       <Routes />
