@@ -10,3 +10,9 @@ export type DashboardScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
   'Dashboard'
 >;
+
+export type LoginStackScreenNavigationProps = StackNavigationProp<
+  RootStackParamList,
+  'Dashboard',
+  'SignIn'
+>;

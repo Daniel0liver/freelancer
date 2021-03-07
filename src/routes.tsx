@@ -9,6 +9,7 @@ import Header from './components/Header';
 import OnBoard from './pages/OnBoard';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
+import SignIn from './pages/SignIn';
 
 import { Button, Icon } from './components/Header/styles';
 
@@ -32,6 +33,9 @@ export default function Routes() {
             headerShown: false,
           }}
         />
+
+        <Stack.Screen name="SignIn" component={SignIn} />
+
         <Stack.Screen
           name="Dashboard"
           component={Dashboard}
@@ -49,6 +53,7 @@ export default function Routes() {
             ),
           }}
         />
+
         <Stack.Screen
           name="Settings"
           component={Settings}

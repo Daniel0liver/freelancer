@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components';
 
 import StatusBar from '../../components/StatusBar';
 
-import { DashboardScreenNavigationProp } from '../../navigation/types';
+import { LoginStackScreenNavigationProps } from '../../navigation/types';
 
 import Tasksimage from '../../assets/images/TaskList.svg';
 
@@ -21,13 +21,14 @@ import {
 } from './styles';
 
 interface IOnBoard {
-  navigation: DashboardScreenNavigationProp;
+  navigation: LoginStackScreenNavigationProps;
 }
 
 export default function OnBoard({ navigation }: IOnBoard) {
   const theme = useTheme();
 
   const goToDashboard = () => navigation.replace('Dashboard');
+  const goToSignIn = () => navigation.push('SignIn');
 
   return (
     <SafeAreaView>
@@ -47,7 +48,7 @@ export default function OnBoard({ navigation }: IOnBoard) {
           <Button onPress={() => goToDashboard()}>
             <Label>Get started now</Label>
           </Button>
-          <ButtonSignIn onPress={() => { }}>
+          <ButtonSignIn onPress={() => goToSignIn()}>
             <Label>i am already registered</Label>
           </ButtonSignIn>
         </ButtonContainer>
