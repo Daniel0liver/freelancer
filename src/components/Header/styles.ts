@@ -3,7 +3,7 @@ import { RectButton } from 'react-native-gesture-handler';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
 export const Container = styled.View.attrs(({ theme }) => ({
-  paddingHorizontal: 15,
+  paddingHorizontal: 10,
   ...theme.boxShadow,
 }))`
   flex-direction: row;

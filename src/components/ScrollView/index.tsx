@@ -11,7 +11,7 @@ export default function CustomScrollView({ children }: IScrollViewProps) {
       scrollEventThrottle={1}
       showsVerticalScrollIndicator={false}
       contentContainerStyle={{
-        paddingHorizontal: 15,
+        paddingHorizontal: 10,
       }}>
       {children}
     </ScrollView>
