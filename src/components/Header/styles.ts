@@ -4,16 +4,16 @@ import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
 export const Container = styled.View.attrs(({ theme }) => ({
   paddingHorizontal: 15,
-  ...theme.boxShadow
+  ...theme.boxShadow,
 }))`
   flex-direction: row;
-  background-color:${({ theme }) => theme.palette.primary.surface};
+  background-color: ${({ theme }) => theme.palette.primary.surface};
   height: 60px;
 `;
 
 export const Left = styled.View`
   flex: 1;
-  justify-content: center; 
+  justify-content: center;
   align-items: flex-start;
 `;
 

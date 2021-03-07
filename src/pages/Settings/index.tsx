@@ -7,7 +7,12 @@ import StatusBar from '../../components/StatusBar';
 import { SafeAreaView } from './styles';
 
 export default function Settings() {
-  const data = [{ title: 'Theme' }, { title: 'Language' }, { title: 'Premium' }]
+  const data = [
+    { title: 'Theme' },
+    { title: 'Language' },
+    { title: 'Premium' },
+  ];
+
   return (
     <SafeAreaView>
       <StatusBar barStyle="dark-content" />

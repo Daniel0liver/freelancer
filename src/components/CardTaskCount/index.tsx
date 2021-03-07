@@ -3,12 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { CardStateProps, ICardTaskCountProps } from './types';
 import { Container, Card, Title, Subtitle } from './styles';
 
-export default function CardTaskCount({ activeLength, ongoingLength, doneLength, onChange }: ICardTaskCountProps) {
+export default function CardTaskCount({
+  activeLength,
+  ongoingLength,
+  doneLength,
+  onChange,
+}: ICardTaskCountProps) {
   const [activeCard, setActiveCard] = useState<CardStateProps>('active');
 
   useEffect(() => {
     onChange(activeCard);
-  }, [activeCard]);
+  }, [activeCard, onChange]);
 
   const hasActive = () => {
     return activeCard === 'active';
