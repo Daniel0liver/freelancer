@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { useTheme } from 'styled-components';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -16,51 +17,58 @@ import { Button, Icon } from './components/Header/styles';
 export default function Routes() {
   const theme = useTheme();
   const navigationRef = useRef(null);
+  const { signed } = useSelector((state) => state.auth);
 
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator
-        initialRouteName="OnBoard"
+        initialRouteName={signed ? 'Dashboard' : 'OnBoard'}
         screenOptions={{
           header: ({ scene, navigation, previous }) => (
             <Header scene={scene} navigation={navigation} previous={previous} />
           ),
         }}>
-        <Stack.Screen
-          name="OnBoard"
-          component={OnBoard}
-          options={{
-            headerShown: false,
-          }}
-        />
+        {signed ? (
+          <>
+            <Stack.Screen
+              name="Dashboard"
+              component={Dashboard}
+              options={{
+                title: 'Hi, Daniel Oliveira',
+                headerRight: () => (
+                  <Button
+                    onPress={() => navigationRef.current?.navigate('Settings')}>
+                    <Icon
+                      name="settings"
+                      size={20}
+                      color={theme.palette.primary.contrastText}
+                    />
+                  </Button>
+                ),
+              }}
+            />
 
-        <Stack.Screen name="SignIn" component={SignIn} />
+            <Stack.Screen
+              name="Settings"
+              component={Settings}
+              options={{
+                title: 'Settings',
+              }}
+            />
+          </>
+        ) : (
+          <>
+            <Stack.Screen
+              name="OnBoard"
+              component={OnBoard}
+              options={{
+                headerShown: false,
+              }}
+            />
 
-        <Stack.Screen
-          name="Dashboard"
-          component={Dashboard}
-          options={{
-            title: 'Hi, Daniel Oliveira',
-            headerRight: () => (
-              <Button
-                onPress={() => navigationRef.current?.navigate('Settings')}>
-                <Icon
-                  name="settings"
-                  size={20}
-                  color={theme.palette.primary.contrastText}
-                />
-              </Button>
-            ),
-          }}
-        />
-
-        <Stack.Screen
-          name="Settings"
-          component={Settings}
-          options={{
-            title: 'Settings',
-          }}
-        />
+            <Stack.Screen name="SignIn" component={SignIn} />
+          </>
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   );
