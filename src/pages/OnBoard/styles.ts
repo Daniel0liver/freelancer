@@ -46,15 +46,22 @@ export const ButtonContainer = styled.View`
 export const Button = styled(RectButton)`
   background-color: ${({ theme }) => theme.palette.secondary.main};
   width: 100%;
-  height: 65px;
+  height: 48px;
   border-radius: 20px;
   align-items: center;
   justify-content: center;
 `;
 
-export const FooterLink = styled.Text`
-  margin-top: 20px;
+export const ButtonSignIn = styled(Button)`
+  background-color: transparent;
+  margin-top: 10px;
+  height: 48px;
+  border-radius: 100px;
+`;
+
+export const Label = styled.Text`
   font-size: 16px;
+  text-transform: uppercase;
   font-weight: 600;
   color: ${({ theme }) => theme.palette.common.white};
 `;

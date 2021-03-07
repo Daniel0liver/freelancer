@@ -16,7 +16,8 @@ import {
   Title,
   SubTitle,
   Button,
-  FooterLink,
+  ButtonSignIn,
+  Label,
 } from './styles';
 
 interface IOnBoard {
@@ -44,9 +45,11 @@ export default function OnBoard({ navigation }: IOnBoard) {
         </TitleContainer>
         <ButtonContainer>
           <Button onPress={() => goToDashboard()}>
-            <SubTitle>Get started now</SubTitle>
+            <Label>Get started now</Label>
           </Button>
-          <FooterLink>Do you have on account? login</FooterLink>
+          <ButtonSignIn onPress={() => { }}>
+            <Label>i am already registered</Label>
+          </ButtonSignIn>
         </ButtonContainer>
       </Footer>
     </SafeAreaView>
