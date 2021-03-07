@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523239338876",
+    "project_id": "freelancer-trytech",
+    "storage_bucket": "freelancer-trytech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523239338876:android:29d013e08a47635da62af9",
+        "android_client_info": {
+          "package_name": "com.freelancer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523239338876-1fjpielia7fhci1mkk4i4q3rdtgkch46.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqec2Sgv3eky7hBggSPTCEktEXO4yeLFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523239338876-1fjpielia7fhci1mkk4i4q3rdtgkch46.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
