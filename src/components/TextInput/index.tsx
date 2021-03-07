@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { TextInputProps } from 'react-native';
 
 import { Container, Input, Label } from './styles';
@@ -9,6 +9,7 @@ interface ITextInput extends TextInputProps {
 
 export default function TextInputFloat({
   label,
+  value,
   onChangeText,
   ...props
 }: ITextInput) {
@@ -16,9 +17,16 @@ export default function TextInputFloat({
   const [isFocused, setIsFocused] = useState(false);
   const [text, setText] = useState('');
 
-  const handleChange = (value: string) => {
-    onChangeText && onChangeText(value);
-    setText(value);
+  useEffect(() => {
+    if (value?.length) {
+      setIsFocused(true);
+      setText(value);
+    }
+  }, []);
+
+  const handleChange = (changedValue: string) => {
+    onChangeText && onChangeText(changedValue);
+    setText(changedValue);
   };
 
   const handleFocus = () => setIsFocused(true);
@@ -35,6 +43,7 @@ export default function TextInputFloat({
       <Input
         ref={inputRef}
         {...props}
+        value={value}
         isFocused={isFocused}
         onFocus={handleFocus}
         onBlur={handleBlur}
