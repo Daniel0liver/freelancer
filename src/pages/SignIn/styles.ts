@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { ImageProps } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import AntDesignIcons from 'react-native-vector-icons/AntDesign';
 
@@ -9,8 +10,14 @@ export const SafeAreaView = styled.SafeAreaView.attrs({
   background-color: ${({ theme }) => theme.palette.primary.background};
 `;
 
+export const ImageContainer = styled.View`
+  margin-top: 30px;
+`;
+
+export const Image = styled.Image<ImageProps>``;
+
 export const Title = styled.Text`
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: 700;

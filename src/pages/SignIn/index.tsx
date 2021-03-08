@@ -2,12 +2,20 @@ import React, { useState } from 'react';
 import { Alert } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { KeyboardAvoidingView, Platform } from 'react-native';
+import Logo from '../../assets/images/logo.png';
 
 import { signInResquest } from '../../store/modules/auth/actions';
 
 import Input from '../../components/TextInput';
 
-import { SafeAreaView, Title, Button, ArrowLeftIcon } from './styles';
+import {
+  SafeAreaView,
+  Title,
+  Button,
+  ImageContainer,
+  Image,
+  ArrowLeftIcon,
+} from './styles';
 
 export default function SignIn() {
   const dispatch = useDispatch();
@@ -25,6 +33,10 @@ export default function SignIn() {
 
   return (
     <SafeAreaView>
+      <ImageContainer>
+        <Image width={'100%'} height={'10%'} source={Logo} />
+      </ImageContainer>
+
       <Title>Welcome back!</Title>
 
       <KeyboardAvoidingView
